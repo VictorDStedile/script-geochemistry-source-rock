@@ -20,7 +20,7 @@ install.packages("NeuralNetTools")
 library(NeuralNetTools)
 plotnet(red)
 
-pred=predict(red,testeo2)
-pred2=predict(red,entreno2)
+pred=predict(red,testeo)
+pred2=predict(red,entreno)
 pred
 pred2
