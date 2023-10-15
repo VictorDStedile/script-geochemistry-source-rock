@@ -3,12 +3,12 @@ install.packages("openxlsx")
 library(openxlsx)
 prueba <- "C:/Users/victo/PROYECTO/BASE DE DATOS/prueba3.xlsx"
 base <- read.xlsx(prueba)
-base <- base[-(21:25),]
+base <- base[-(21:25),] # 21 to 25 records were considered outliers
 base
 install.packages("caret")
 library(caret)
 
-set.seed(1234);particion=createDataPartition(y=base$COT,p=0.75,list=FALSE)
+particion=createDataPartition(y=base$COT,p=0.75,list=FALSE)
 entreno=base[particion,]
 testeo=base[-particion,]
 
